@@ -1,3 +1,6 @@
+import { Enttity } from "./Entity.js";
+import { Rect } from "./Rect.js";
+
 /*--------------------------
 Setup
 --------------------------*/
@@ -56,8 +59,18 @@ const images = [
     },
     width: 200,
     height: 100
-  }
+  },
+  {
+    src: "./images/test.png",
+    initialPosition: {
+      x: 350,
+      y: 280
+    },
+    width: 200,
+    height: 100
+  },
 ];
+
 
 // This will be populated as we create our bodies and sprites from the images.
 const sceneObjects = [];
@@ -113,6 +126,19 @@ document.querySelector(".scene").appendChild(app.view);
 Create Scene Object
 --------------------------*/
 
+const options ={
+    app: app,
+    bodies: Bodies,
+    world: World,
+    engine: engine,
+    image: images[2]
+};
+
+//t1 test
+const t1 = Enttity(options);
+sceneObjects.push(t1);
+
+
 function createSceneObject(image) {
   // Matter Body
   const imageBody = Bodies.rectangle(
@@ -152,6 +178,7 @@ app.ticker.add(() => {
     object.sprite.position = object.body.position;
     object.sprite.rotation = object.body.angle;
   });
+
 });
 
 /*--------------------------
