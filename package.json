@@ -1,0 +1,24 @@
+{
+  "name": "gamepixijs",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev":"lite-server"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ramses2099/gamepixijs.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ramses2099/gamepixijs/issues"
+  },
+  "homepage": "https://github.com/ramses2099/gamepixijs#readme",
+  "dependencies": {
+    "lite-server": "^2.6.1"
+  }
+}
